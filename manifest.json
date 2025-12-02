@@ -1,0 +1,24 @@
+{
+    "manifest_version": 3,
+    "name": "Leetcode Meme Reward",
+    "version": 1.0,
+    "description": "Plays a funny Youtube Meme Short when you solve a question on Leetcode",
+    "permissions": ["storage"],
+    "host_permission": ["*://*.leetcode.com/*"],
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://leetcode.com/problems/*"],
+            "js": ["content.js"],
+            "css": ["style.css"]
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": [],
+            "matches": ["https://leetcode.com/*"]
+        }
+    ]
+}
